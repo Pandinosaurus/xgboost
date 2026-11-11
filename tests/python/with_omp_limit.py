@@ -1,11 +1,12 @@
-import os
-import xgboost as xgb
-from sklearn.datasets import make_classification
-from sklearn.metrics import roc_auc_score
 import sys
 
+from sklearn.datasets import make_classification
+from sklearn.metrics import roc_auc_score
 
-def run_omp(output_path: str):
+import xgboost as xgb
+
+
+def run_omp(output_path: str) -> None:
     X, y = make_classification(
         n_samples=200, n_features=32, n_classes=3, n_informative=8
     )
